@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class app {
     public static void main(String[] args) {
 
+        ArrayList<Product> inventory = getInventory();
+
     }
 
     public static ArrayList<Product> getInventory() {
