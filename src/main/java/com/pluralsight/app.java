@@ -20,6 +20,9 @@ public class app {
 
     ArrayList<Product> inventory = new ArrayList<>();
 
+        FileReader fileReader = new FileReader("inventory.csv");
+        BufferedReader reader = new BufferedReader(fileReader);
+
     inventory.add(new Product(101, "Laptop", 799.99));
     inventory.add(new Product(102, "Keyboard", 49.99));
     inventory.add(new Product(103, "Mouse", 29.99));
