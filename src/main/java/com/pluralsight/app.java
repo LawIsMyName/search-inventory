@@ -11,13 +11,7 @@ public class app {
         ArrayList<Product> inventory = getInventory();
 
         // print for each product in the inventory
-       for (Product product : inventory) {
-
-           System.out.printf("%d | %s | $%.2f%n",
-                  product.getId(),
-                   product.getName(),
-                   product.getPrice());
-       }
+        displayInventory(inventory);
 
     }
 
@@ -33,9 +27,15 @@ public class app {
     inventory.add(new Product(105, "Headset", 89.99));
 
     return inventory;
-
-
-
-
 }
+
+    private static void displayInventory(ArrayList<Product> inventory) {
+        for (Product product : inventory) {
+
+            System.out.printf("%d | %s | $%.2f%n",
+                    product.getId(),
+                    product.getName(),
+                    product.getPrice());
+        }
     }
+}
