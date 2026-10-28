@@ -27,7 +27,12 @@ public class app {
 
         String line = reader.readLine();
 
+        while (line != null) {
 
+            String[] parts = line.split("\\|");
+
+
+        }
 
 
 
