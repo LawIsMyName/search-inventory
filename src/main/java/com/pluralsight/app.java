@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 
@@ -22,6 +24,14 @@ public class app {
 
         FileReader fileReader = new FileReader("inventory.csv");
         BufferedReader reader = new BufferedReader(fileReader);
+
+        String line = reader.readLine();
+
+
+
+
+
+
 
     inventory.add(new Product(101, "Laptop", 799.99));
     inventory.add(new Product(102, "Keyboard", 49.99));
