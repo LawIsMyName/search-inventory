@@ -31,6 +31,10 @@ public class app {
 
             String[] parts = line.split("\\|");
 
+            int id = Integer.parseInt(parts[0]);
+            String name = parts[1];
+            double price = Double.parseDouble(parts[2]);
+
 
         }
 
