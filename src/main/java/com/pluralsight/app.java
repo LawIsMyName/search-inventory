@@ -1,7 +1,9 @@
 package com.pluralsight;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -18,7 +20,7 @@ public class app {
     }
 
     // method creating the list of products and the inventory
-    public static ArrayList<Product> getInventory() {
+    public static ArrayList<Product> getInventory()  {
 
     ArrayList<Product> inventory = new ArrayList<>();
 
@@ -37,7 +39,12 @@ public class app {
 
             Product product = new Product(id, name, price);
             inventory.add(product);
+
+            line = reader.readLine();
         }
+
+        reader.close();
+        fileReader.close();
 
 
 
