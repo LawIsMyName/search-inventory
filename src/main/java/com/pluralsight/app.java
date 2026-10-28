@@ -2,17 +2,26 @@ package com.pluralsight;
 
 import java.util.ArrayList;
 
+
+
 public class app {
     public static void main(String[] args) {
 
+        // call from method
         ArrayList<Product> inventory = getInventory();
 
+        // print for each product in the inventory
        for (Product product : inventory) {
 
+           System.out.printf("%d | %s | $%.2f%n",
+                  product.getId(),
+                   product.getName(),
+                   product.getPrice());
        }
 
     }
 
+    // method creating the list of products and the inventory
     public static ArrayList<Product> getInventory() {
 
     ArrayList<Product> inventory = new ArrayList<>();
