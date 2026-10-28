@@ -7,6 +7,10 @@ public class app {
 
         ArrayList<Product> inventory = getInventory();
 
+       for (Product product : inventory) {
+
+       }
+
     }
 
     public static ArrayList<Product> getInventory() {
