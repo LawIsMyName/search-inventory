@@ -24,35 +24,35 @@ public class app {
 
     ArrayList<Product> inventory = new ArrayList<>();
 
-        FileReader fileReader = new FileReader("inventory.csv");
-        BufferedReader reader = new BufferedReader(fileReader);
+        try {
+            FileReader fileReader = new FileReader("inventory.csv");
+            BufferedReader reader = new BufferedReader(fileReader);
 
-        String line = reader.readLine();
+            String line = reader.readLine();
 
-        while (line != null) {
+            while (line != null) {
 
-            String[] parts = line.split("\\|");
+                String[] parts = line.split("\\|");
 
-            int id = Integer.parseInt(parts[0]);
-            String name = parts[1];
-            double price = Double.parseDouble(parts[2]);
+                int id = Integer.parseInt(parts[0]);
+                String name = parts[1];
+                double price = Double.parseDouble(parts[2]);
 
-            Product product = new Product(id, name, price);
-            inventory.add(product);
+                Product product = new Product(id, name, price);
+                inventory.add(product);
 
-            line = reader.readLine();
+                line = reader.readLine();
+            }
+
+            reader.close();
+            fileReader.close();
+        } catch (IOException e) {
+            //throw new RuntimeException(e);
+            System.out.println("error reading or retrieving file.");
         }
 
-        reader.close();
-        fileReader.close();
 
-
-
-
-
-
-
-    return inventory;
+        return inventory;
 }
 
     private static void displayInventory(ArrayList<Product> inventory) {
