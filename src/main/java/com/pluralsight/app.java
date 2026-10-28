@@ -24,20 +24,24 @@ public class app {
 
     ArrayList<Product> inventory = new ArrayList<>();
 
+    // add file reader to method
         try {
             FileReader fileReader = new FileReader("inventory.csv");
             BufferedReader reader = new BufferedReader(fileReader);
 
             String line = reader.readLine();
 
+            // while loop to read each line in the file
             while (line != null) {
 
+                // separate the info
                 String[] parts = line.split("\\|");
 
                 int id = Integer.parseInt(parts[0]);
                 String name = parts[1];
                 double price = Double.parseDouble(parts[2]);
 
+               // create the product and add it to the list
                 Product product = new Product(id, name, price);
                 inventory.add(product);
 
@@ -50,7 +54,6 @@ public class app {
             //throw new RuntimeException(e);
             System.out.println("error reading or retrieving file.");
         }
-
 
         return inventory;
 }
