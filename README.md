@@ -20,8 +20,8 @@ search-inventory/
 │   ├── App.java
 │   └── Product.java
 │
-├── inventory.csv
-└── README.md
+├──  README.md 
+└── inventory.csv
 ```
 ### Interesting Code: 
 ```java
