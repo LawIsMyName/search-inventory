@@ -48,7 +48,7 @@ bufferedReader.close();
 fileReader.close();
 ```
 ### Screenshot:
-![The Inventory](.\images\Screenshot 2026-10-29 152433.png) 
+![The Inventory](/images/inventory.png) 
 
 
 
